@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "results": [
+    {
+      "domain": "dev_set",
+      "score": 0.0,
+      "max_score": 10,
+      "avg_score": 0.0,
+      "task_scores": {
+        "find_parks": 0.0,
+        "nyc_sport_event": 0.0,
+        "overleaf_template": 0.0,
+        "animation_movies": 0.0,
+        "lol_sylas": 0.0,
+        "spotify_artists": 0.0,
+        "llava_commit": 0.0,
+        "ad_patent": 0.0,
+        "buy_monitor": 0.0,
+        "yu_lineage": 0.0
+      },
+      "time_used": 728.1500968933105
+    }
+  ],
+  "participants": {
+    "green": "019d2093-40bc-7910-9e72-c7e6e85356bc",
+    "agent": "019d20b7-8ecc-7011-8de6-e1eee372d3bf"
+  }
+}
