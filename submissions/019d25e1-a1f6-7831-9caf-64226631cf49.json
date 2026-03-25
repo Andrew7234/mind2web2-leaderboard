@@ -1,0 +1,117 @@
+{
+  "manifest_version": "0.1.0",
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "agent_agent_llm": {
+        "type": "string"
+      },
+      "agent_anthropic_api_key": {
+        "type": "string",
+        "secret": true,
+        "default": ""
+      },
+      "agent_deepseek_api_key": {
+        "type": "string",
+        "secret": true,
+        "default": ""
+      },
+      "agent_gemini_api_key": {
+        "type": "string",
+        "secret": true,
+        "default": ""
+      },
+      "agent_openai_api_key": {
+        "type": "string",
+        "secret": true,
+        "default": ""
+      },
+      "green_deepseek_api_key": {
+        "type": "string",
+        "secret": true,
+        "default": ""
+      },
+      "green_gemini_api_key": {
+        "type": "string",
+        "secret": true,
+        "default": ""
+      },
+      "green_judge_llm": {
+        "type": "string",
+        "default": "openai/gpt-4o-mini"
+      },
+      "green_openai_api_key": {
+        "type": "string",
+        "secret": true,
+        "default": ""
+      }
+    },
+    "required": [
+      "agent_agent_llm"
+    ],
+    "additionalProperties": false
+  },
+  "components": {
+    "gateway": {
+      "manifest": "https://raw.githubusercontent.com/RDI-Foundation/agentbeats-gateway/refs/tags/v0.3/amber-manifest.json5",
+      "config": {
+        "assessment_config": {
+          "domain": "dev_set"
+        },
+        "participant_roles": {
+          "green": "green",
+          "purple1": "agent"
+        },
+        "callback_urls": {}
+      }
+    },
+    "green": {
+      "manifest": "https://raw.githubusercontent.com/Andrew7234/mind2web2-agentbeats/refs/heads/main/amber-manifest.json5",
+      "config": {
+        "deepseek_api_key": "${config.green_deepseek_api_key}",
+        "gemini_api_key": "${config.green_gemini_api_key}",
+        "judge_llm": "${config.green_judge_llm}",
+        "openai_api_key": "${config.green_openai_api_key}"
+      }
+    },
+    "agent": {
+      "manifest": "https://raw.githubusercontent.com/Andrew7234/mind2web2-agentbeats-purple/refs/heads/main/amber-manifest.json5",
+      "config": {
+        "agent_llm": "${config.agent_agent_llm}",
+        "anthropic_api_key": "${config.agent_anthropic_api_key}",
+        "deepseek_api_key": "${config.agent_deepseek_api_key}",
+        "gemini_api_key": "${config.agent_gemini_api_key}",
+        "openai_api_key": "${config.agent_openai_api_key}"
+      }
+    }
+  },
+  "bindings": [
+    {
+      "to": "#gateway.green",
+      "from": "#green.a2a"
+    },
+    {
+      "to": "#gateway.purple1",
+      "from": "#agent.a2a"
+    },
+    {
+      "to": "#green.proxy",
+      "from": "#gateway.proxy",
+      "weak": true
+    },
+    {
+      "to": "#agent.proxy",
+      "from": "#gateway.proxy",
+      "weak": true
+    }
+  ],
+  "exports": {
+    "results": "#gateway.results"
+  },
+  "metadata": {
+    "agentbeats_ids": {
+      "green": "019d2093-40bc-7910-9e72-c7e6e85356bc",
+      "agent": "019d20b7-8ecc-7011-8de6-e1eee372d3bf"
+    }
+  }
+}
