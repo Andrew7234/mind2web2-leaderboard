@@ -1,0 +1,55 @@
+{
+  "status": "completed",
+  "participants": {
+    "green": "019d2093-40bc-7910-9e72-c7e6e85356bc",
+    "agent": "019d20b7-8ecc-7011-8de6-e1eee372d3bf"
+  },
+  "results": [
+    {
+      "domain": "dev_set",
+      "score": 0.0,
+      "max_score": 3,
+      "avg_score": 0.0,
+      "task_scores": {
+        "llava_commit": 0.0,
+        "spotify_artists": 0.0,
+        "ad_patent": 0.0
+      },
+      "time_used": 288.5680274963379
+    },
+    {
+      "domain": "dev_set",
+      "score": 0.5555555555555556,
+      "max_score": 3,
+      "avg_score": 0.1851851851851852,
+      "task_scores": {
+        "lol_sylas": 0.0,
+        "yu_lineage": 0.0,
+        "animation_movies": 0.5555555555555556
+      },
+      "time_used": 1479.3503696918488
+    },
+    {
+      "domain": "dev_set",
+      "score": 0.0,
+      "max_score": 2,
+      "avg_score": 0.0,
+      "task_scores": {
+        "nyc_sport_event": 0.0,
+        "buy_monitor": 0.0
+      },
+      "time_used": 90.92082333564758
+    },
+    {
+      "domain": "dev_set",
+      "score": 0.0,
+      "max_score": 2,
+      "avg_score": 0.0,
+      "task_scores": {
+        "find_parks": 0.0,
+        "overleaf_template": 0.0
+      },
+      "time_used": 48.443007707595825
+    }
+  ]
+}
