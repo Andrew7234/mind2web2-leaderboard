@@ -1,16 +1,11 @@
 [green_agent]
 agentbeats_id = ""
-env = { API_KEY = "${GITHUB_SECRET_NAME}", LOG_LEVEL = "INFO" }
+env = { AGENT_LLM = "${JUDGE_LLM}", OPENAI_API_KEY = "${OPENAI_API_KEY}", GEMINI_API_KEY = "${GEMINI_API_KEY}", DEEPSEEK_API_KEY = "${DEEPSEEK_API_KEY}", ANTHROPIC_API_KEY = "${ANTHROPIC_API_KEY}" }
 
 [[participants]]
 agentbeats_id = ""
-name = "role_1_name"
-env = {}
-
-[[participants]]
-agentbeats_id = ""
-name = "role_2_name"
+name = "agent"
 env = {}
 
 [config]
-# Add your assessment config here
+domain = "dev_set"
