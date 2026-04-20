@@ -1,0 +1,22 @@
+{
+  "image_digests": {
+    "/agent": "ghcr.io/andrew7234/mind2web2-agentbeats-purple@sha256:ebe85a72e27d0546f97cd45cca5fbf84d1dd9aff6aa886efe2e7f1a9aaffed38",
+    "/gateway": "ghcr.io/rdi-foundation/agentbeats-gateway@sha256:3f9976889c598092dc4273312ec431cbc48bbe064ff65b5613425f4990bc1d4c",
+    "/green": "ghcr.io/andrew7234/mind2web2-agentbeats@sha256:01f8c5a14c5facf8757c19138d9ed43069b89078398171487dc1c8c96937c01e"
+  },
+  "manifest_digests": {
+    "/": "sha256:7EX1rBnZHPXioU0+oHpIbyAee/6MizKMI5B0joowiJU=",
+    "/agent": "sha256:oi1ZJ2VhnNaneZ0HezSkwrvWPzhmVKwu5Kl7Zt4YDoQ=",
+    "/gateway": "sha256:55vdRwO+54k8WBZhh3nrN6Gn7cnk/+hm1dG+xt/GYSE=",
+    "/green": "sha256:9VheC9q0MsyNgpshoEPJttt5CsxN0sxNdjDJmS1+HtY="
+  },
+  "timestamp": "2026-04-20T20:00:50Z",
+  "github_actions": {
+    "run_url": "https://github.com/Andrew7234/mind2web2-leaderboard/actions/runs/24687353030",
+    "ref": "refs/pull/23/merge",
+    "sha": "6e64cf5fbb6e64f0d4f3932cc74bd75244f49960",
+    "repository_url": "https://github.com/Andrew7234/mind2web2-leaderboard",
+    "workflow_ref": "Andrew7234/mind2web2-leaderboard/.github/workflows/quick-submit.yml@refs/pull/23/merge",
+    "workflow_sha": "6e64cf5fbb6e64f0d4f3932cc74bd75244f49960"
+  }
+}
